@@ -1,24 +1,38 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--
+## Introduction
 
-    <!--[if !mso]><!-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!--<![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="light dark">
-    <meta name="supported-color-schemes" content="light dark">
-    <title></title>
-    <style type="text/css">
+Learn how to create your first AMP email. This sample covers the basic structure of AMP emails.
+-->
+
+<!-- -->
+<!-- Doctype declaration is required. -->
+<!doctype html>
+<!-- This tells everyone that this is an AMP email. `<html amp4email>` works too. -->
+<html ⚡4email>
+<!-- ## Head -->
+<!-- -->
+<head>
+    <!-- The charset definition must be the first child of the `<head>` tag. -->
+    <meta charset="utf-8">
+    <!-- The AMP runtime.-->
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <!-- The AMP for Email boilerplate.  -->
+    <style amp4email-boilerplate>body {
+        visibility: hidden
+    }</style>
+    <!-- Import AMP components in the header, for example the `amp-carousel` component. -->
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    <!--
+      ### Allowed CSS properties and selectors
+
+      All CSS in any AMP document must be included in a `<style amp-custom>` tag within the header as shown above. Inline style attributes are not allowed in AMP.  CSS allowed within email messages vary depending on the email provider. For reference, the list of CSS properties and values allowed in Gmail can be found at [Gmail Supported CSS Properties & Media Queries](https://developers.google.com/gmail/design/reference/supported_css).
+    -->
+    <style amp-custom>
         :root {
             color-scheme: light dark;
             supported-color-schemes: light dark;
         }
-    </style>
 
-    <style type="text/css">
         @media screen and (max-width: 610px) {
             .td100pr {
                 max-width: none !important;
@@ -85,16 +99,18 @@
                 max-width: 50% !important;
             }
         }
-    </style>
-    <!--[if (gte mso 9)|(IE)]>
-    <style type="text/css">
+
         table {
             border-collapse: collapse !important;
         }
     </style>
-    <![endif]-->
+    <!--
+      Note: The entire `<style>` tag cannot exceed 75,000 bytes. The validator will check for this.
+    -->
+    <!-- -->
 </head>
-<!-- template_pro_editor -->
+<!-- ## Body -->
+<!-- -->
 <body style="margin:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;min-width:100%;background-color:#eeeeee;">
 <center class="wrapper" style="width:100%;table-layout:fixed;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;">
 
@@ -111,7 +127,8 @@
 
             <tr>
                 <td class="full-width-image" style="padding-top:0px;padding-bottom:0;padding-right:0; padding-left:0px;"
-                    align="left"><img src="https://paradox.band/images/amp/600.png" class="pro_editor_img_editable" width="600" alt=""
+                    align="left"><img src="https://paradox.band/images/amp/600.png" class="pro_editor_img_editable"
+                                      width="600" alt=""
                                       style="border-width:0;width:100%;max-width:600px;height:auto; display:block;"/>
                 </td>
             </tr>
@@ -155,7 +172,8 @@
                                                     <tr>
                                                         <td align="center" class=""
                                                             style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
-                                                            <img class="pro_editor_img_editable" src="https://paradox.band/images/amp/ico1.png"
+                                                            <img class="pro_editor_img_editable"
+                                                                 src="https://paradox.band/images/amp/ico1.png"
                                                                  height="86" width="112" alt=""/></td>
                                                     </tr>
                                                     <tr>
@@ -200,7 +218,8 @@
                                                     <tr>
                                                         <td align="center" class=""
                                                             style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
-                                                            <img class="pro_editor_img_editable" src="https://paradox.band/images/amp/ico2.png"
+                                                            <img class="pro_editor_img_editable"
+                                                                 src="https://paradox.band/images/amp/ico2.png"
                                                                  height="86" width="112" alt=""/></td>
                                                     </tr>
                                                     <tr>
@@ -260,7 +279,8 @@
                                                     <tr>
                                                         <td align="center" class=""
                                                             style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
-                                                            <img class="pro_editor_img_editable" src="https://paradox.band/images/amp/ico3.png"
+                                                            <img class="pro_editor_img_editable"
+                                                                 src="https://paradox.band/images/amp/ico3.png"
                                                                  height="86" width="112" alt=""/></td>
                                                     </tr>
                                                     <tr>
@@ -307,7 +327,8 @@
                                                     <tr>
                                                         <td align="center" class=""
                                                             style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
-                                                            <img class="pro_editor_img_editable" src="https://paradox.band/images/amp/ico4.png"
+                                                            <img class="pro_editor_img_editable"
+                                                                 src="https://paradox.band/images/amp/ico4.png"
                                                                  height="86" width="112" alt=""/></td>
                                                     </tr>
                                                     <tr>
@@ -617,7 +638,8 @@
                                                     <tr>
                                                         <td align="center" class=""
                                                             style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
-                                                            <img class="pro_editor_img_editable" src="https://paradox.band/images/amp/ico5.png"
+                                                            <img class="pro_editor_img_editable"
+                                                                 src="https://paradox.band/images/amp/ico5.png"
                                                                  width="50" style="height: auto;" alt=""/></td>
                                                     </tr>
                                                     <tr>
@@ -672,7 +694,8 @@
                                                     <tr>
                                                         <td align="center" class=""
                                                             style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
-                                                            <img class="pro_editor_img_editable" src="https://paradox.band/images/amp/ico6.png"
+                                                            <img class="pro_editor_img_editable"
+                                                                 src="https://paradox.band/images/amp/ico6.png"
                                                                  width="50" style="height: auto;" alt=""/></td>
                                                     </tr>
                                                     <tr>
@@ -728,7 +751,8 @@
                                                     <tr>
                                                         <td align="center" class=""
                                                             style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
-                                                            <img class="pro_editor_img_editable" src="https://paradox.band/images/amp/ico7.png"
+                                                            <img class="pro_editor_img_editable"
+                                                                 src="https://paradox.band/images/amp/ico7.png"
                                                                  width="50" style="height: auto;" alt=""/></td>
                                                     </tr>
                                                     <tr>
@@ -797,14 +821,16 @@
                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                     <tbody>
                                     <tr>
-                                        <td style="padding-bottom: 5px;"><a href="#"><img src="https://paradox.band/images/amp/button1.png" width="100%"
-                                                                                          style="width: 100%; height: auto; max-width: 250px; border: 0; display: block;"
-                                                                                          alt=""/></a></td>
+                                        <td style="padding-bottom: 5px;"><a href="#"><img
+                                                src="https://paradox.band/images/amp/button1.png" width="100%"
+                                                style="width: 100%; height: auto; max-width: 250px; border: 0; display: block;"
+                                                alt=""/></a></td>
                                     </tr>
                                     <tr>
-                                        <td style="padding-bottom: 5px;"><a href="#"><img src="https://paradox.band/images/amp/button2.png" width="100%"
-                                                                                          style="width: 100%; height: auto; max-width: 250px; border: 0; display: block;"
-                                                                                          alt=""/></a></td>
+                                        <td style="padding-bottom: 5px;"><a href="#"><img
+                                                src="https://paradox.band/images/amp/button2.png" width="100%"
+                                                style="width: 100%; height: auto; max-width: 250px; border: 0; display: block;"
+                                                alt=""/></a></td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -850,8 +876,6 @@
         </table>
         <![endif]-->
     </div>
-
-
 </center>
 </body>
 </html>
