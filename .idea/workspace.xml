@@ -21,8 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1686d178-0b41-4fb5-978d-1ba6093879b8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amp-test.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/amp.html" beforeDir="false" afterPath="$PROJECT_DIR$/amp.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +55,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -72,7 +73,7 @@
       <option name="presentableId" value="Default" />
       <updated>1603903843311</updated>
       <workItem from="1603903844491" duration="345000" />
-      <workItem from="1603905334470" duration="6716000" />
+      <workItem from="1603905334470" duration="8172000" />
     </task>
     <servers />
   </component>
@@ -103,6 +104,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="221" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1603904335787" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1603953363876">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1603953363876" />
     <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1603919411305">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
