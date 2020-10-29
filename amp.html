@@ -1,108 +1,139 @@
-<!--
-## Introduction
-
-Learn how to create your first AMP email. This sample covers the basic structure of AMP emails.
--->
-
-<!-- -->
-<!-- Doctype declaration is required. -->
 <!doctype html>
-<!-- This tells everyone that this is an AMP email. `<html amp4email>` works too. -->
 <html ⚡4email>
-<!-- ## Head -->
-<!-- -->
 <head>
-    <!-- The charset definition must be the first child of the `<head>` tag. -->
     <meta charset="utf-8">
-    <!-- The AMP runtime.-->
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <!-- The AMP for Email boilerplate.  -->
     <style amp4email-boilerplate>body {
         visibility: hidden
     }</style>
-    <!-- Import AMP components in the header, for example the `amp-carousel` component. -->
-    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
-    <!--
-      ### Allowed CSS properties and selectors
-
-      All CSS in any AMP document must be included in a `<style amp-custom>` tag within the header as shown above. Inline style attributes are not allowed in AMP.  CSS allowed within email messages vary depending on the email provider. For reference, the list of CSS properties and values allowed in Gmail can be found at [Gmail Supported CSS Properties & Media Queries](https://developers.google.com/gmail/design/reference/supported_css).
-    -->
+    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
     <style amp-custom>
         :root {
             color-scheme: light dark;
             supported-color-schemes: light dark;
         }
 
+        .webkit {
+            margin: 0 auto;
+            margin-top: 15px;
+        }
+
         @media screen and (max-width: 610px) {
             .td100pr {
-                max-width: none !important;
+                max-width: none;
             }
 
             .webkit {
-                margin-top: 0px !important;
+                margin-top: 0px;
             }
         }
 
-        @media (prefers-color-scheme: dark ) {
-            .bglight {
-                background-color: #fefefe !important;
-            }
+        .two-column .column {
+            max-width: 260px;
+        }
+
+        .three-column .column {
+            max-width: 170px;
+        }
+
+        .tdcenter {
+            text-align: left;
+        }
+
+        .padleft0 {
+            padding-left: 10px;
+        }
+
+        .hide {
+            width: 100%;
+            max-width: 140px;
+            border: 0;
+            display: block;
         }
 
         @media screen and (max-width: 480px) {
             .two-column .column,
             .three-column .column {
-                max-width: 100% !important;
+                max-width: 100%;
             }
 
-            .two-column img {
-                max-width: 100% !important;
+            .two-column amp-img {
+                max-width: 100%;
             }
 
-            .three-column img {
-                max-width: 50% !important;
+            .three-column amp-img {
+                max-width: 50%;
             }
 
             .tdcenter {
-                text-align: center !important;
+                text-align: center;
             }
 
             .tdtext0 {
-                padding-left: 0px !important;
-                padding-right: 0px !important;
+                padding-left: 0px;
+                padding-right: 0px;
             }
 
             .padleft0 {
-                padding-left: 0 !important;
+                padding-left: 0;
             }
 
             .hide {
-                display: none !important;
+                display: none;
             }
 
         }
 
+        .tdtext {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        .tdtext25 {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
         @media screen and (max-width: 400px) {
-            .tdtext {
-                padding-left: 15px !important;
-                padding-right: 15px !important;
+            .tdtext,
+            .tdtext25 {
+                padding-left: 15px;
+                padding-right: 15px;
             }
 
         }
 
         @media screen and (min-width: 481px) and (max-width: 670px) {
             .three-column .column {
-                max-width: 33% !important;
+                max-width: 33%;
             }
 
             .two-column .column {
-                max-width: 50% !important;
+                max-width: 50%;
             }
         }
 
         table {
-            border-collapse: collapse !important;
+            border-collapse: collapse;
         }
+
+        .accordion-title {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .accordion-title span:first-child {
+            align-items: flex-start;
+            display: flex;
+            width: 50%;
+        }
+
+        .accordion-title span:nth-child(2) {
+            align-items: flex-end;
+            display: flex;
+            width: 40%;
+        }
+
     </style>
     <!--
       Note: The entire `<style>` tag cannot exceed 75,000 bytes. The validator will check for this.
@@ -112,9 +143,9 @@ Learn how to create your first AMP email. This sample covers the basic structure
 <!-- ## Body -->
 <!-- -->
 <body style="margin:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;min-width:100%;background-color:#eeeeee;">
-<center class="wrapper" style="width:100%;table-layout:fixed;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;">
+<div class="wrapper" style="width:100%;table-layout:fixed;">
 
-    <div class="webkit" style="max-width:600px; margin:0 auto; margin-top:15px;">
+    <div class="webkit" style="max-width:600px;">
         <!--[if (gte mso 9)|(IE)]>
         <table width="600" align="center"
                style="border-spacing:0;font-family:Arial, Helvetica, sans-serif;color:#4d4d4d;">
@@ -127,14 +158,15 @@ Learn how to create your first AMP email. This sample covers the basic structure
 
             <tr>
                 <td class="full-width-image" style="padding-top:0px;padding-bottom:0;padding-right:0; padding-left:0px;"
-                    align="left"><img src="https://paradox.band/images/amp/600.png" class="pro_editor_img_editable"
-                                      width="600" alt=""
-                                      style="border-width:0;width:100%;max-width:600px;height:auto; display:block;"/>
+                    align="left">
+                    <amp-img src="https://paradox.band/images/amp/600.png" class="pro_editor_img_editable" width="600"
+                             height="187" layout="responsive" alt=""
+                             style="border-width:0;width:100%;max-width:600px;height:auto; display:block;"/>
                 </td>
             </tr>
             <tr>
-                <td class="tdtext bglight"
-                    style="padding-top:0px;padding-bottom:20px;padding-right:25px;padding-left:25px;width:100%;text-align:left; font-family: Verdana, Helvetica, sans-serif; font-size:14px; line-height:20px; color:#38464f;">
+                <td class="tdtext25 bglight"
+                    style="padding-top:0px;padding-bottom:20px;width:100%;text-align:left; font-family: Verdana, Helvetica, sans-serif; font-size:14px; line-height:20px; color:#38464f;">
                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                         <tr>
                             <td style="font-family: Arial, Helvetica, sans-serif; font-size:14px; line-height:20px;border-bottom: 2px solid #8cc542;">
@@ -158,8 +190,7 @@ Learn how to create your first AMP email. This sample covers the basic structure
                                         <td width="260" valign="top"
                                             style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
                                 <![endif]-->
-                                <div class="column"
-                                     style="width:100%;max-width:260px;display:inline-block;vertical-align:top;">
+                                <div class="column" style="width:100%;display:inline-block;vertical-align:top;">
                                     <table width="100%" cellpadding="0" cellspacing="0"
                                            style="border-spacing:0;font-family:Arial, Helvetica, sans-serif;color:#797f8b;">
                                         <tbody>
@@ -172,9 +203,10 @@ Learn how to create your first AMP email. This sample covers the basic structure
                                                     <tr>
                                                         <td align="center" class=""
                                                             style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
-                                                            <img class="pro_editor_img_editable"
-                                                                 src="https://paradox.band/images/amp/ico1.png"
-                                                                 height="86" width="112" alt=""/></td>
+                                                            <amp-img class="pro_editor_img_editable"
+                                                                     src="https://paradox.band/images/amp/ico1.png"
+                                                                     height="86" width="112" alt=""/>
+                                                        </td>
                                                     </tr>
                                                     <tr>
                                                         <td align="center" class="pro_editor_editable"
@@ -183,7 +215,7 @@ Learn how to create your first AMP email. This sample covers the basic structure
                                                                    cellpadding="0" align="center">
                                                                 <tbody>
                                                                 <tr>
-                                                                    <td style="text-align: left;" class="tdcenter">
+                                                                    <td class="tdcenter">
                                                                         <strong>ЗЕМЕЛЬНЫЙ УЧАСТОК</strong><br/>
                                                                         15 шт.
                                                                     </td>
@@ -204,8 +236,7 @@ Learn how to create your first AMP email. This sample covers the basic structure
                                 <td width="260" valign="top"
                                     style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
                                 <![endif]-->
-                                <div class="column"
-                                     style="width:100%;max-width:260px;display:inline-block;vertical-align:top;">
+                                <div class="column" style="width:100%;display:inline-block;vertical-align:top;">
                                     <table width="100%" cellpadding="0" cellspacing="0"
                                            style="border-spacing:0;font-family:Arial, Helvetica, sans-serif;color:#797f8b;">
                                         <tbody>
@@ -218,9 +249,10 @@ Learn how to create your first AMP email. This sample covers the basic structure
                                                     <tr>
                                                         <td align="center" class=""
                                                             style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
-                                                            <img class="pro_editor_img_editable"
-                                                                 src="https://paradox.band/images/amp/ico2.png"
-                                                                 height="86" width="112" alt=""/></td>
+                                                            <amp-img class="pro_editor_img_editable"
+                                                                     src="https://paradox.band/images/amp/ico2.png"
+                                                                     height="86" width="112" alt=""/>
+                                                        </td>
                                                     </tr>
                                                     <tr>
                                                         <td align="center" class="pro_editor_editable"
@@ -229,7 +261,7 @@ Learn how to create your first AMP email. This sample covers the basic structure
                                                                    cellpadding="0" align="center">
                                                                 <tbody>
                                                                 <tr>
-                                                                    <td style="text-align: left;" class="tdcenter">
+                                                                    <td class="tdcenter">
                                                                         <strong>ИМУЩЕСТВЕННЫЙ
                                                                             КОМПЛЕКС</strong><br/>
                                                                         7 шт.
@@ -265,8 +297,7 @@ Learn how to create your first AMP email. This sample covers the basic structure
                                         <td width="260" valign="top"
                                             style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
                                 <![endif]-->
-                                <div class="column"
-                                     style="width:100%;max-width:260px;display:inline-block;vertical-align:top;">
+                                <div class="column" style="width:100%;display:inline-block;vertical-align:top;">
                                     <table width="100%" cellpadding="0" cellspacing="0"
                                            style="border-spacing:0;font-family:Arial, Helvetica, sans-serif;color:#797f8b;">
                                         <tbody>
@@ -279,9 +310,10 @@ Learn how to create your first AMP email. This sample covers the basic structure
                                                     <tr>
                                                         <td align="center" class=""
                                                             style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
-                                                            <img class="pro_editor_img_editable"
-                                                                 src="https://paradox.band/images/amp/ico3.png"
-                                                                 height="86" width="112" alt=""/></td>
+                                                            <amp-img class="pro_editor_img_editable"
+                                                                     src="https://paradox.band/images/amp/ico3.png"
+                                                                     height="86" width="112" alt=""/>
+                                                        </td>
                                                     </tr>
                                                     <tr>
                                                         <td align="center" class="pro_editor_editable"
@@ -290,7 +322,7 @@ Learn how to create your first AMP email. This sample covers the basic structure
                                                                    cellpadding="0" align="center">
                                                                 <tbody>
                                                                 <tr>
-                                                                    <td style="text-align: left;" class="tdcenter">
+                                                                    <td class="tdcenter">
                                                                         <strong>ЗДАНИЕ</strong><br/>
                                                                         2 шт.
                                                                     </td>
@@ -313,8 +345,7 @@ Learn how to create your first AMP email. This sample covers the basic structure
                                 <td width="260" valign="top"
                                     style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
                                 <![endif]-->
-                                <div class="column"
-                                     style="width:100%;max-width:260px;display:inline-block;vertical-align:top;">
+                                <div class="column" style="width:100%;display:inline-block;vertical-align:top;">
                                     <table width="100%" cellpadding="0" cellspacing="0"
                                            style="border-spacing:0;font-family:Arial, Helvetica, sans-serif;color:#797f8b;">
                                         <tbody>
@@ -327,9 +358,10 @@ Learn how to create your first AMP email. This sample covers the basic structure
                                                     <tr>
                                                         <td align="center" class=""
                                                             style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
-                                                            <img class="pro_editor_img_editable"
-                                                                 src="https://paradox.band/images/amp/ico4.png"
-                                                                 height="86" width="112" alt=""/></td>
+                                                            <amp-img class="pro_editor_img_editable"
+                                                                     src="https://paradox.band/images/amp/ico4.png"
+                                                                     height="86" width="112" alt=""/>
+                                                        </td>
                                                     </tr>
                                                     <tr>
                                                         <td align="center" class="pro_editor_editable"
@@ -338,7 +370,7 @@ Learn how to create your first AMP email. This sample covers the basic structure
                                                                    cellpadding="0" align="center">
                                                                 <tbody>
                                                                 <tr>
-                                                                    <td style="text-align: left;" class="tdcenter">
+                                                                    <td class="tdcenter">
                                                                         <strong>ПОМЕЩЕНИЕ</strong><br/>
                                                                         2 шт.
                                                                     </td>
@@ -373,233 +405,173 @@ Learn how to create your first AMP email. This sample covers the basic structure
                                         <td valign="top"
                                             style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
                                 <![endif]-->
-                                <table width="100%" align="center" style="width: 100%; max-width: 480px;" border="0"
-                                       cellspacing="0" cellpadding="0">
-                                    <tbody>
-
-                                    <tr>
-                                        <td style="padding: 0px; padding-top: 0px; padding-bottom: 5px;">
-                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                                <tbody>
-                                                <tr>
-                                                    <td bgcolor="#edf6e2"
-                                                        style="padding: 5px; padding-top: 10px; padding-bottom: 10px;">
-                                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                                            <tbody>
-                                                            <tr>
-                                                                <td align="left"
-                                                                    style="font-size: 13px; line-height:18px; font-weight: bold; font-family: Verdana, Helvetica, sans-serif; color:#38464f; padding-left: 10px;">
-                                                                    г&nbsp;Владивосток
-                                                                </td>
-                                                                <td align="right"
-                                                                    style="font-size: 9px; line-height:18px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f;">
-                                                                    окончание приема заявок <span
-                                                                        style="color: #8cc542; font-weight: bold;">24.08.2020</span>
-                                                                </td>
-                                                            </tr>
-
-                                                            </tbody>
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style="padding: 0px; padding-top: 0px; padding-bottom: 5px;">
-                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                                <tbody>
-                                                <tr>
-                                                    <td style="padding: 5px; padding-top: 5px; padding-bottom: 5px; border: 2px solid #edf6e2; ">
-                                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                                            <tbody>
-                                                            <tr>
-                                                                <td align="left"
-                                                                    style="font-size: 13px; line-height:18px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f; padding-left: 10px;">
-                                                                    Адрес: пр-т 100-летия Владивостока, д. 180<br/>Начальная
-                                                                    цена: 72 722 000 руб.<br/>Площадь: 0,64 га
-                                                                </td>
-                                                                <td align="right" width="160"
-                                                                    style="font-size: 13px; line-height:16px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f;"><span
-                                                                        style="color: #b4e29a; font-weight: bold;">земельный <br/>
-									      участок</span><br/>
-                                                                    <table class="buttonwrapper" width="120" border="0"
-                                                                           cellpadding="0" cellspacing="0" align="right"
-                                                                           style="width: 120px;  margin-top: 5px;">
-                                                                        <tr>
-                                                                            <td class="buttonwrapper pro_editor_editable"
-                                                                                align="center"
-                                                                                style="padding: 10px 5px 10px 5px; background: #edf6e2; border-radius: 10px;  -webkit-border-radius:10px; -moz-border-radius:10px;">
-                                                                                <a href="#" class=""
-                                                                                   style="color: #38464f; text-decoration: none; display: block; font-size: 13px; line-height:18px;font-family: Arial, Helvetica, sans-serif; font-weight:bold;"><span
-                                                                                        style="color:#38464f;">подробнее</span></a>
-                                                                            </td>
-                                                                        </tr>
-                                                                    </table>
-                                                                </td>
-                                                            </tr>
-
-                                                            </tbody>
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style="padding: 0px; padding-top: 0px; padding-bottom: 5px;">
-                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                                <tbody>
-                                                <tr>
-                                                    <td bgcolor="#edf6e2"
-                                                        style="padding: 5px; padding-top: 10px; padding-bottom: 10px;">
-                                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                                            <tbody>
-                                                            <tr>
-                                                                <td align="left"
-                                                                    style="font-size: 13px; line-height:18px; font-weight: bold; font-family: Verdana, Helvetica, sans-serif; color:#38464f; padding-left: 10px;">
-                                                                    г.&nbsp;Иваново
-                                                                </td>
-                                                                <td align="right"
-                                                                    style="font-size: 9px; line-height:18px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f;">
-                                                                    окончание приема заявок <span
-                                                                        style="color: #8cc542; font-weight: bold;">10.08.2020</span>
-                                                                </td>
-                                                            </tr>
-
-                                                            </tbody>
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style="padding: 0px; padding-top: 0px; padding-bottom: 5px;">
-                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                                <tbody>
-                                                <tr>
-                                                    <td style="padding: 5px; padding-top: 5px; padding-bottom: 5px; border: 2px solid #edf6e2; ">
-                                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                                            <tbody>
-                                                            <tr>
-                                                                <td align="left"
-                                                                    style="font-size: 13px; line-height:18px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f; padding-left: 10px;">
-                                                                    Адрес: ул. Лежневская, д. 164Б<br/>
-                                                                    Начальная цена: 4 090 943 руб.<br/>Площадь: 0,26
-                                                                    га/272,5 м²
-                                                                </td>
-                                                                <td align="right" width="160"
-                                                                    style="font-size: 13px; line-height:16px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f;"><span
-                                                                        style="color: #b4e29a; font-weight: bold;">имущественный
-комплекс</span><br/>
-                                                                    <table class="buttonwrapper" width="120" border="0"
-                                                                           cellpadding="0" cellspacing="0" align="right"
-                                                                           style="width: 120px;  margin-top: 5px;">
-                                                                        <tr>
-                                                                            <td class="buttonwrapper pro_editor_editable"
-                                                                                align="center"
-                                                                                style="padding: 10px 5px 10px 5px; background: #edf6e2; border-radius: 10px;  -webkit-border-radius:10px; -moz-border-radius:10px;">
-                                                                                <a href="#" class=""
-                                                                                   style="color: #38464f; text-decoration: none; display: block; font-size: 13px; line-height:18px;font-family: Arial, Helvetica, sans-serif; font-weight:bold;"><span
-                                                                                        style="color:#38464f;">подробнее</span></a>
-                                                                            </td>
-                                                                        </tr>
-                                                                    </table>
-                                                                </td>
-                                                            </tr>
-
-                                                            </tbody>
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style="padding: 0px; padding-top: 0px; padding-bottom: 5px;">
-                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                                <tbody>
-                                                <tr>
-                                                    <td bgcolor="#edf6e2"
-                                                        style="padding: 5px; padding-top: 10px; padding-bottom: 10px;">
-                                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                                            <tbody>
-                                                            <tr>
-                                                                <td align="left"
-                                                                    style="font-size: 13px; line-height:18px; font-weight: bold; font-family: Verdana, Helvetica, sans-serif; color:#38464f; padding-left: 10px;">
-                                                                    г.&nbsp;Калуга
-                                                                </td>
-                                                                <td align="right"
-                                                                    style="font-size: 9px; line-height:18px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f;">
-                                                                    окончание приема заявок <span
-                                                                        style="color: #8cc542; font-weight: bold;">07.10.2020</span>
-                                                                </td>
-                                                            </tr>
-
-                                                            </tbody>
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style="padding: 0px; padding-top: 0px; padding-bottom: 5px;">
-                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                                <tbody>
-                                                <tr>
-                                                    <td style="padding: 5px; padding-top: 5px; padding-bottom: 5px; border: 2px solid #edf6e2; ">
-                                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                                            <tbody>
-                                                            <tr>
-                                                                <td align="left"
-                                                                    style="font-size: 13px; line-height:18px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f; padding-left: 10px;">
-                                                                    Адрес: ул. 40 лет Октября <br/>Начальная цена: 6 625
-                                                                    700 руб. <br/>Площадь: 12,38 га
-                                                                </td>
-                                                                <td align="right" width="160"
-                                                                    style="font-size: 13px; line-height:16px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f;"><span
-                                                                        style="color: #b4e29a; font-weight: bold;">аренда земельного
-участка</span><br/>
-                                                                    <table class="buttonwrapper" width="120" border="0"
-                                                                           cellpadding="0" cellspacing="0" align="right"
-                                                                           style="width: 120px;  margin-top: 5px;">
-                                                                        <tr>
-                                                                            <td class="buttonwrapper pro_editor_editable"
-                                                                                align="center"
-                                                                                style="padding: 10px 5px 10px 5px; background: #edf6e2; border-radius: 10px;  -webkit-border-radius:10px; -moz-border-radius:10px;">
-                                                                                <a href="#" class=""
-                                                                                   style="color: #38464f; text-decoration: none; display: block; font-size: 13px; line-height:18px;font-family: Arial, Helvetica, sans-serif; font-weight:bold;"><span
-                                                                                        style="color:#38464f;">подробнее</span></a>
-                                                                            </td>
-                                                                        </tr>
-                                                                    </table>
-                                                                </td>
-                                                            </tr>
-
-                                                            </tbody>
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-                                        </td>
-                                    </tr>
-
-
-                                    </tbody>
-                                </table>
+                                <div class="accordion">
+                                    <amp-accordion>
+                                        <section>
+                                            <h2 style="background-color: #edf6e2; padding: 5px; padding-top: 10px; padding-bottom: 10px;">
+                          <span class="accordion-title">
+                                              <span style="font-size: 13px; line-height:18px; font-weight: bold; font-family: Verdana, Helvetica, sans-serif; color:#38464f; padding-left: 10px; padding-right:5px;">
+                            г.&nbsp;Владивосток</span>
+                                                <span style="font-size: 9px; line-height:18px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f;">
+                            окончание приема заявок <span style="color: #8cc542; font-weight: bold;">24.08.2020</span>
+                          </span>
+                            </span>
+                                            </h2>
+                                            <div style="padding-top: 10px; padding-bottom: 10px;">
+                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td style="padding: 5px; padding-top: 5px; padding-bottom: 5px; border: 2px solid #edf6e2; ">
+                                                            <table width="100%" border="0" cellspacing="0"
+                                                                   cellpadding="0">
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td align="left"
+                                                                        style="font-size: 13px; line-height:18px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f; padding-left: 10px;">
+                                                                        Адрес: пр-т 100-летия Владивостока, д. 180<br/>Начальная
+                                                                        цена: 72 722 000 руб.<br/>Площадь: 0,64 га
+                                                                    </td>
+                                                                    <td align="right" width="160"
+                                                                        style="font-size: 13px; line-height:16px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f;"><span
+                                                                            style="color: #b4e29a; font-weight: bold;">земельный <br/>
+                                          участок</span><br/>
+                                                                        <table class="buttonwrapper" width="120"
+                                                                               border="0"
+                                                                               cellpadding="0" cellspacing="0"
+                                                                               align="right"
+                                                                               style="width: 120px;  margin-top: 5px;">
+                                                                            <tr>
+                                                                                <td class="buttonwrapper pro_editor_editable"
+                                                                                    align="center"
+                                                                                    style="padding: 10px 5px 10px 5px; background: #edf6e2; border-radius: 10px;  -webkit-border-radius:10px; -moz-border-radius:10px;">
+                                                                                    <a href="#" class=""
+                                                                                       style="color: #38464f; text-decoration: none; display: block; font-size: 13px; line-height:18px;font-family: Arial, Helvetica, sans-serif; font-weight:bold;">
+                                                                                        <span style="color:#38464f;">подробнее</span></a>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </section>
+                                        <section>
+                                            <h2 style="background-color: #edf6e2; padding: 5px; padding-top: 10px; padding-bottom: 10px;">
+                          <span class="accordion-title">
+                                              <span style="font-size: 13px; line-height:18px; font-weight: bold; font-family: Verdana, Helvetica, sans-serif; color:#38464f; padding-left: 10px; padding-right:5px;">
+                          	г.&nbsp;Иваново</span>
+                                                <span style="font-size: 9px; line-height:18px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f;">
+                            окончание приема заявок <span style="color: #8cc542; font-weight: bold;">10.08.2020</span>
+                          </span>
+                           </span>
+                                            </h2>
+                                            <div style="padding-top: 10px; padding-bottom: 10px;">
+                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td style="padding: 5px; padding-top: 5px; padding-bottom: 5px; border: 2px solid #edf6e2; ">
+                                                            <table width="100%" border="0" cellspacing="0"
+                                                                   cellpadding="0">
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td align="left"
+                                                                        style="font-size: 13px; line-height:18px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f; padding-left: 10px;">
+                                                                        Адрес: ул. Лежневская, д. 164Б<br/>
+                                                                        Начальная цена: 4 090 943 руб.<br/>Площадь: 0,26
+                                                                        га/272,5 м²
+                                                                    </td>
+                                                                    <td align="right" width="160"
+                                                                        style="font-size: 13px; line-height:16px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f;"><span
+                                                                            style="color: #b4e29a; font-weight: bold;">имущественный
+                                          комплекс</span><br/>
+                                                                        <table class="buttonwrapper" width="120"
+                                                                               border="0"
+                                                                               cellpadding="0" cellspacing="0"
+                                                                               align="right"
+                                                                               style="width: 120px;  margin-top: 5px;">
+                                                                            <tr>
+                                                                                <td class="buttonwrapper pro_editor_editable"
+                                                                                    align="center"
+                                                                                    style="padding: 10px 5px 10px 5px; background: #edf6e2; border-radius: 10px;  -webkit-border-radius:10px; -moz-border-radius:10px;">
+                                                                                    <a href="#" class=""
+                                                                                       style="color: #38464f; text-decoration: none; display: block; font-size: 13px; line-height:18px;font-family: Arial, Helvetica, sans-serif; font-weight:bold;"><span
+                                                                                            style="color:#38464f;">подробнее</span></a>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </section>
+                                        <section>
+                                            <h2
+                                                    style="background-color: #edf6e2; padding: 5px; padding-top: 10px; padding-bottom: 10px;">
+						  <span class="accordion-title">
+                                              <span style="font-size: 13px; line-height:18px; font-weight: bold; font-family: Verdana, Helvetica, sans-serif; color:#38464f; padding-left: 10px; padding-right:5px;">
+                            г.&nbsp;Калуга
+                          </span>
+                                                <span style="font-size: 9px; line-height:18px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f;">
+                            окончание приема заявок <span style="color: #8cc542; font-weight: bold;">07.10.2020</span>
+                          </span>
+                                              </span>
+                                            </h2>
+                                            <div style="padding-top: 10px; padding-bottom: 10px;">
+                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td style="padding: 5px; padding-top: 5px; padding-bottom: 5px; border: 2px solid #edf6e2; ">
+                                                            <table width="100%" border="0" cellspacing="0"
+                                                                   cellpadding="0">
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td align="left"
+                                                                        style="font-size: 13px; line-height:18px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f; padding-left: 10px;">
+                                                                        Адрес: ул. 40 лет Октября <br/>Начальная цена: 6
+                                                                        625
+                                                                        700 руб. <br/>Площадь: 12,38 га
+                                                                    </td>
+                                                                    <td align="right" width="160"
+                                                                        style="font-size: 13px; line-height:16px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f;"><span
+                                                                            style="color: #b4e29a; font-weight: bold;">аренда земельного
+                                          участка</span><br/>
+                                                                        <table class="buttonwrapper" width="120"
+                                                                               border="0"
+                                                                               cellpadding="0" cellspacing="0"
+                                                                               align="right"
+                                                                               style="width: 120px;  margin-top: 5px;">
+                                                                            <tr>
+                                                                                <td class="buttonwrapper pro_editor_editable"
+                                                                                    align="center"
+                                                                                    style="padding: 10px 5px 10px 5px; background: #edf6e2; border-radius: 10px;  -webkit-border-radius:10px; -moz-border-radius:10px;">
+                                                                                    <a href="#" class=""
+                                                                                       style="color: #38464f; text-decoration: none; display: block; font-size: 13px; line-height:18px;font-family: Arial, Helvetica, sans-serif; font-weight:bold;"><span
+                                                                                            style="color:#38464f;">подробнее</span></a>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </section>
+                                    </amp-accordion>
+                                </div>
                                 <!--[if (gte mso 9)|(IE)]>
                                 </td></tr>
                                 </table>
@@ -610,7 +582,7 @@ Learn how to create your first AMP email. This sample covers the basic structure
                         </tr>
                         <tr>
                             <td class="tdtext bglight"
-                                style="padding-top:40px;padding-bottom:10px;padding-right:40px; padding-left:40px; text-align: center;font-size: 17px; line-height:14px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f; word-break: normal; border-top: 2px solid #8cc542;">
+                                style="padding-top:40px;padding-bottom:10px;text-align: center;font-size: 17px; line-height:14px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f; word-break: normal; border-top: 2px solid #8cc542;">
                                 <p style="margin: 0; margin-bottom: 10px;  font-weight: bold;">ПРЕИМУЩЕСТВА</p>
                             </td>
                         </tr>
@@ -624,8 +596,7 @@ Learn how to create your first AMP email. This sample covers the basic structure
                                         <td width="170" valign="top"
                                             style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
                                 <![endif]-->
-                                <div class="column"
-                                     style="width:100%;max-width:170px;display:inline-block;vertical-align:top;">
+                                <div class="column" style="width:100%;display:inline-block;vertical-align:top;">
                                     <table width="100%" cellpadding="0" cellspacing="0"
                                            style="border-spacing:0;font-family:Arial, Helvetica, sans-serif;color:#797f8b;">
                                         <tbody>
@@ -638,9 +609,11 @@ Learn how to create your first AMP email. This sample covers the basic structure
                                                     <tr>
                                                         <td align="center" class=""
                                                             style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
-                                                            <img class="pro_editor_img_editable"
-                                                                 src="https://paradox.band/images/amp/ico5.png"
-                                                                 width="50" style="height: auto;" alt=""/></td>
+                                                            <amp-img class="pro_editor_img_editable"
+                                                                     src="https://paradox.band/images/amp/ico5.png"
+                                                                     width="50" height="52" style="height: auto;"
+                                                                     alt=""/>
+                                                        </td>
                                                     </tr>
                                                     <tr>
                                                         <td align="center" class="pro_editor_editable"
@@ -680,8 +653,7 @@ Learn how to create your first AMP email. This sample covers the basic structure
                                 <td width="170" valign="top"
                                     style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
                                 <![endif]-->
-                                <div class="column"
-                                     style="width:100%;max-width:170px;display:inline-block;vertical-align:top;">
+                                <div class="column" style="width:100%;display:inline-block;vertical-align:top;">
                                     <table width="100%" cellpadding="0" cellspacing="0"
                                            style="border-spacing:0;font-family:Arial, Helvetica, sans-serif;color:#797f8b;">
                                         <tbody>
@@ -694,9 +666,11 @@ Learn how to create your first AMP email. This sample covers the basic structure
                                                     <tr>
                                                         <td align="center" class=""
                                                             style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
-                                                            <img class="pro_editor_img_editable"
-                                                                 src="https://paradox.band/images/amp/ico6.png"
-                                                                 width="50" style="height: auto;" alt=""/></td>
+                                                            <amp-img class="pro_editor_img_editable"
+                                                                     src="https://paradox.band/images/amp/ico6.png"
+                                                                     width="50" height="52" style="height: auto;"
+                                                                     alt=""/>
+                                                        </td>
                                                     </tr>
                                                     <tr>
                                                         <td align="center" class="pro_editor_editable"
@@ -737,8 +711,7 @@ Learn how to create your first AMP email. This sample covers the basic structure
                                 <td width="170" valign="top"
                                     style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
                                 <![endif]-->
-                                <div class="column"
-                                     style="width:100%;max-width:170px;display:inline-block;vertical-align:top;">
+                                <div class="column" style="width:100%;display:inline-block;vertical-align:top;">
                                     <table width="100%" cellpadding="0" cellspacing="0"
                                            style="border-spacing:0;font-family:Arial, Helvetica, sans-serif;color:#797f8b;">
                                         <tbody>
@@ -751,9 +724,11 @@ Learn how to create your first AMP email. This sample covers the basic structure
                                                     <tr>
                                                         <td align="center" class=""
                                                             style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
-                                                            <img class="pro_editor_img_editable"
-                                                                 src="https://paradox.band/images/amp/ico7.png"
-                                                                 width="50" style="height: auto;" alt=""/></td>
+                                                            <amp-img class="pro_editor_img_editable"
+                                                                     src="https://paradox.band/images/amp/ico7.png"
+                                                                     width="50" height="52" style="height: auto;"
+                                                                     alt=""/>
+                                                        </td>
                                                     </tr>
                                                     <tr>
                                                         <td align="center" class="pro_editor_editable"
@@ -801,15 +776,15 @@ Learn how to create your first AMP email. This sample covers the basic structure
 
             <tr>
                 <td class="tdtext bglight "
-                    style="padding-top:12px;padding-bottom:12px;padding-right:40px; padding-left:40px; text-align: left;font-size: 16px; line-height:22px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f; word-break: normal;  border-top: 18px solid #8cc542;">
+                    style="padding-top:12px;padding-bottom:12px; text-align: left;font-size: 16px; line-height:22px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f; word-break: normal;  border-top: 18px solid #8cc542;">
                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                         <tbody>
                         <tr>
-                            <td width="20%" class="hide"><img src="https://paradox.band/images/amp/qr.png" width="100%"
-                                                              style="width: 100%; max-width: 140px;border: 0; display: block;"
-                                                              alt=""/></td>
+                            <td width="20%" class="hide">
+                                <amp-img src="https://paradox.band/images/amp/qr.png" width="100" height="100" alt=""/>
+                            </td>
                             <td width="45%" class="padleft0"
-                                style=" padding-left: 10px; padding-right: 10px; text-align: left;font-size: 16px; line-height:22px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f; word-break: normal;">
+                                style="padding-right: 10px; text-align: left;font-size: 16px; line-height:22px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f; word-break: normal;">
                                 <p style="margin: 0; font-size: 12px; line-height: 18px;">Все вопросы Вы можете задать
                                     по&nbsp;единому номеру телефона:</p>
 
@@ -821,16 +796,20 @@ Learn how to create your first AMP email. This sample covers the basic structure
                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                     <tbody>
                                     <tr>
-                                        <td style="padding-bottom: 5px;"><a href="#"><img
-                                                src="https://paradox.band/images/amp/button1.png" width="100%"
-                                                style="width: 100%; height: auto; max-width: 250px; border: 0; display: block;"
-                                                alt=""/></a></td>
+                                        <td style="padding-bottom: 5px;"><a href="#">
+                                            <amp-img src="https://paradox.band/images/amp/button1.png" width="150"
+                                                     height="33" layout="responsive"
+                                                     style="width: 100%; height: auto; max-width: 250px; border: 0; display: block;"
+                                                     alt=""/>
+                                        </a></td>
                                     </tr>
                                     <tr>
-                                        <td style="padding-bottom: 5px;"><a href="#"><img
-                                                src="https://paradox.band/images/amp/button2.png" width="100%"
-                                                style="width: 100%; height: auto; max-width: 250px; border: 0; display: block;"
-                                                alt=""/></a></td>
+                                        <td style="padding-bottom: 5px;"><a href="#">
+                                            <amp-img src="https://paradox.band/images/amp/button2.png" width="150"
+                                                     height="40" layout="responsive"
+                                                     style="width: 100%; height: auto; max-width: 250px; border: 0; display: block;"
+                                                     alt=""/>
+                                        </a></td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -842,14 +821,13 @@ Learn how to create your first AMP email. This sample covers the basic structure
                 </td>
             </tr>
             <tr>
-                <td class="tdtext bglight "
-                    style="padding-top:12px;padding-bottom:12px;padding-right:40px; padding-left:40px; ">
+                <td class="tdtext bglight " style="padding-top:12px;padding-bottom:12px;">
 
                 </td>
             </tr>
             <tr>
                 <td class="tdtext bglight "
-                    style="padding-top:12px;padding-bottom:22px;padding-right:40px; padding-left:40px; text-align: left;font-size: 10px; line-height:11px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f; word-break: normal; ">
+                    style="padding-top:12px;padding-bottom:22px; text-align: left;font-size: 10px; line-height:11px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f; word-break: normal; ">
                     АО&nbsp;&laquo;ДОМ.РФ&raquo; является организацией, которая на&nbsp;основании Федерального закона от&nbsp;24.07.2008
                     &#8470;&nbsp;161-ФЗ &laquo;О&nbsp;содействии развитию жилищного строительства&raquo; выступает
                     агентом Российской Федерации и&nbsp;от&nbsp;своего имени совершает юридические и&nbsp;иные действия,
@@ -866,8 +844,6 @@ Learn how to create your first AMP email. This sample covers the basic structure
                     электронная почта ANTIKORD@DOMRF.RU
                 </td>
             </tr>
-
-
             </tbody>
         </table>
         <!--[if (gte mso 9)|(IE)]>
@@ -876,6 +852,6 @@ Learn how to create your first AMP email. This sample covers the basic structure
         </table>
         <![endif]-->
     </div>
-</center>
+</div>
 </body>
 </html>
