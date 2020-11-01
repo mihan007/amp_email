@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1686d178-0b41-4fb5-978d-1ba6093879b8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amp-test.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/amp.html" beforeDir="false" afterPath="$PROJECT_DIR$/amp.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +39,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GithubDefaultAccount">
@@ -73,7 +77,10 @@
       <option name="presentableId" value="Default" />
       <updated>1603903843311</updated>
       <workItem from="1603903844491" duration="345000" />
-      <workItem from="1603905334470" duration="8172000" />
+      <workItem from="1603905334470" duration="13897000" />
+      <workItem from="1604176230015" duration="18000" />
+      <workItem from="1604178038287" duration="100000" />
+      <workItem from="1604178778731" duration="2643000" />
     </task>
     <servers />
   </component>
@@ -90,6 +97,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="586" y="365" key="Github.ShareDialog" timestamp="1603903990209">
@@ -104,10 +112,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="221" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1603904335787" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1603953363876">
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1603982788266">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1603953363876" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1603982788266" />
     <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1603919411305">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
