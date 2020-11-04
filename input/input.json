@@ -221,26 +221,6 @@
             "link": "https://xn--d1aqf.xn--p1ai/land/auctions/?id=253029"
         }
     ],
-    "Нижегородская обл.": [
-        {
-            "city": "Нижегородская обл.",
-            "address": "р-н Кстовский",
-            "expire": "03.12.2020",
-            "type": "земельный участок",
-            "price": "3 954 000 руб.",
-            "square": "0.42 га",
-            "link": "https://xn--d1aqf.xn--p1ai/land/auctions/?id=257308"
-        },
-        {
-            "city": "Нижегородская обл.",
-            "address": "р-н Кстовский",
-            "expire": "27.11.2020",
-            "type": "земельный участок",
-            "price": "4 043 000 руб.",
-            "square": "1.17 га",
-            "link": "https://xn--d1aqf.xn--p1ai/land/auctions/?id=255757"
-        }
-    ],
     "Нижегородская область": [
         {
             "city": "Нижегородская область",
@@ -250,6 +230,24 @@
             "price": "39 835 000 руб.",
             "square": "18.76 га",
             "link": "https://xn--d1aqf.xn--p1ai/land/auctions/?id=255933"
+        },
+        {
+            "city": "Нижегородская область",
+            "address": "р-н Кстовский",
+            "expire": "27.11.2020",
+            "type": "земельный участок",
+            "price": "4 043 000 руб.",
+            "square": "1.17 га",
+            "link": "https://xn--d1aqf.xn--p1ai/land/auctions/?id=255757"
+        },
+        {
+            "city": "Нижегородская область",
+            "address": "р-н Кстовский",
+            "expire": "03.12.2020",
+            "type": "земельный участок",
+            "price": "3 954 000 руб.",
+            "square": "0.42 га",
+            "link": "https://xn--d1aqf.xn--p1ai/land/auctions/?id=257308"
         }
     ],
     "Новосибирск": [

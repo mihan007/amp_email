@@ -30,8 +30,12 @@ foreach ($homes as $home) {
         "Продажа земельного участка" => "земельный участок"
     ];
 
+    $mappingCity = [
+        "Нижегородская обл." => "Нижегородская область"
+    ];
+
     $preprocessing[] = [
-        'city' => $city,
+        'city' => $mappingCity[$city] ?? $city,
         'address' => $address,
         'expire' => $expire,
         'type' => $mappingType[$home[1]] ?? $home[1],
