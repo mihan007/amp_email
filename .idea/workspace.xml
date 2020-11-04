@@ -19,11 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1686d178-0b41-4fb5-978d-1ba6093879b8" name="Default Changelist" comment="1. Отсортировать города, Отсортировать список объектов в следующем порядке: Москва, Московская область, Санкт Петербург, Ленинградская область, далее города в алфавитном порядке">
+    <list default="true" id="1686d178-0b41-4fb5-978d-1ba6093879b8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process.php" beforeDir="false" afterPath="$PROJECT_DIR$/process.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/result.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amp.html" beforeDir="false" afterPath="$PROJECT_DIR$/amp.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,17 +45,12 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="85237759-7b25-4932-a4e1-9c5416ca73b7" />
   </component>
-  <component name="PhpDebugGeneral" xdebug_debug_port="9174" listening_started="true" />
   <component name="ProjectId" id="1jVz2sEyeog2vEprSYI8sGjsbts" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <OptionsSetting value="false" id="Update" />
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -67,7 +60,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -84,23 +77,11 @@
       <option name="presentableId" value="Default" />
       <updated>1603903843311</updated>
       <workItem from="1603903844491" duration="345000" />
-      <workItem from="1604464661422" duration="1995000" />
+      <workItem from="1603905334470" duration="13897000" />
+      <workItem from="1604176230015" duration="18000" />
+      <workItem from="1604178038287" duration="100000" />
+      <workItem from="1604178778731" duration="3913000" />
     </task>
-    <task id="LOCAL-00001" summary="Make list of elements">
-      <created>1604339343165</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1604339343165</updated>
-    </task>
-    <task id="LOCAL-00002" summary="1. Отсортировать города, Отсортировать список объектов в следующем порядке: Москва, Московская область, Санкт Петербург, Ленинградская область, далее города в алфавитном порядке">
-      <created>1604465843091</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1604465843091</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,18 +99,7 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Make list of elements" />
-    <MESSAGE value="1. Отсортировать города, Отсортировать список объектов в следующем порядке: Москва, Московская область, Санкт Петербург, Ленинградская область, далее города в алфавитном порядке" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Отсортировать города, Отсортировать список объектов в следующем порядке: Москва, Московская область, Санкт Петербург, Ленинградская область, далее города в алфавитном порядке" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="100" y="123" width="1240" height="677" key="DiffContextDialog" timestamp="1604339230204">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="100" y="123" width="1240" height="677" key="DiffContextDialog/0.23.1440.877@0.23.1440.877" timestamp="1604339230204" />
     <state x="586" y="365" key="Github.ShareDialog" timestamp="1603903990209">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -138,73 +108,17 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="530" y="173" key="Github.UntrackedFilesDialog/0.23.1440.877@0.23.1440.877" timestamp="1603903995299" />
-    <state width="1398" height="286" key="GridCell.Tab.0.bottom" timestamp="1604466150652">
+    <state x="221" y="100" key="SettingsEditor" timestamp="1603904335787">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="286" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1604466150652" />
-    <state width="1398" height="286" key="GridCell.Tab.0.center" timestamp="1604466150651">
+    <state x="221" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1603904335787" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1604210605310">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="286" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1604466150651" />
-    <state width="1398" height="286" key="GridCell.Tab.0.left" timestamp="1604466150650">
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1604210605310" />
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1603919411305">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="286" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1604466150650" />
-    <state width="1398" height="286" key="GridCell.Tab.0.right" timestamp="1604466150651">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1398" height="286" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1604466150651" />
-    <state width="1398" height="286" key="GridCell.Tab.1.bottom" timestamp="1604466150653">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1398" height="286" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1604466150653" />
-    <state width="1398" height="286" key="GridCell.Tab.1.center" timestamp="1604466150652">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1398" height="286" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1604466150652" />
-    <state width="1398" height="286" key="GridCell.Tab.1.left" timestamp="1604466150652">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1398" height="286" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1604466150652" />
-    <state width="1398" height="286" key="GridCell.Tab.1.right" timestamp="1604466150653">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1398" height="286" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1604466150653" />
-    <state width="1398" height="286" key="GridCell.Tab.2.bottom" timestamp="1604466150655">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1398" height="286" key="GridCell.Tab.2.bottom/0.23.1440.877@0.23.1440.877" timestamp="1604466150655" />
-    <state width="1398" height="286" key="GridCell.Tab.2.center" timestamp="1604466150654">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1398" height="286" key="GridCell.Tab.2.center/0.23.1440.877@0.23.1440.877" timestamp="1604466150654" />
-    <state width="1398" height="286" key="GridCell.Tab.2.left" timestamp="1604466150654">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1398" height="286" key="GridCell.Tab.2.left/0.23.1440.877@0.23.1440.877" timestamp="1604466150654" />
-    <state width="1398" height="286" key="GridCell.Tab.2.right" timestamp="1604466150654">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1398" height="286" key="GridCell.Tab.2.right/0.23.1440.877@0.23.1440.877" timestamp="1604466150654" />
-    <state x="539" y="392" key="NewPhpFileDialog" timestamp="1604464769071">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="539" y="392" key="NewPhpFileDialog/0.23.1440.877@0.23.1440.877" timestamp="1604464769071" />
-    <state x="221" y="100" key="SettingsEditor" timestamp="1604465566282">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="221" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1604465566282" />
-    <state x="320" y="188" key="Vcs.Push.Dialog.v2" timestamp="1604465844708">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="320" y="188" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1604465844708" />
-    <state x="100" y="123" width="1240" height="677" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1604339361993">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="100" y="123" width="1240" height="677" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.23.1440.877@0.23.1440.877" timestamp="1604339361993" />
-    <state x="518" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604339298559">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="518" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1604339298559" />
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1603919411305" />
   </component>
 </project>
