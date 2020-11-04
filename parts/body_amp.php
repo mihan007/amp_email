@@ -1,155 +1,3 @@
-<?php
-
-$file = file_get_contents('./input/input.json');
-$input = (array)json_decode($file);
-?>
-<!doctype html>
-<html ⚡4email>
-<head>
-    <meta charset="utf-8">
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <style amp4email-boilerplate>body {
-            visibility: hidden
-        }</style>
-    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
-    <style amp-custom>
-        :root {
-            color-scheme: light dark;
-            supported-color-schemes: light dark;
-        }
-
-        .webkit {
-            margin: 0 auto;
-            margin-top: 15px;
-        }
-
-        @media screen and (max-width: 610px) {
-            .td100pr {
-                max-width: none;
-            }
-
-            .webkit {
-                margin-top: 0px;
-            }
-        }
-
-        .two-column .column {
-            max-width: 260px;
-        }
-
-        .three-column .column {
-            max-width: 170px;
-        }
-
-        .tdcenter {
-            text-align: left;
-        }
-
-        .padleft0 {
-            padding-left: 10px;
-        }
-
-        .hide {
-            width: 100%;
-            max-width: 140px;
-            border: 0;
-            display: block;
-        }
-
-        @media screen and (max-width: 480px) {
-            .two-column .column,
-            .three-column .column {
-                max-width: 100%;
-            }
-
-            .two-column amp-img {
-                max-width: 100%;
-            }
-
-            .three-column amp-img {
-                max-width: 50%;
-            }
-
-            .tdcenter {
-                text-align: center;
-            }
-
-            .tdtext0 {
-                padding-left: 0px;
-                padding-right: 0px;
-            }
-
-            .padleft0 {
-                padding-left: 0;
-            }
-        }
-
-        @media screen and (max-width: 497px) {
-            .hide {
-                display: none;
-            }
-        }
-
-        .tdtext {
-            padding-left: 40px;
-            padding-right: 40px;
-        }
-
-        .tdtext25 {
-            padding-left: 25px;
-            padding-right: 25px;
-        }
-
-        @media screen and (max-width: 400px) {
-            .tdtext,
-            .tdtext25 {
-                padding-left: 15px;
-                padding-right: 15px;
-            }
-
-        }
-
-        @media screen and (min-width: 481px) and (max-width: 670px) {
-            .three-column .column {
-                max-width: 33%;
-            }
-
-            .two-column .column {
-                max-width: 50%;
-            }
-        }
-
-        table {
-            border-collapse: collapse;
-        }
-
-
-        .accordion-title {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .accordion-title span:nth-child(2) {
-            text-align: right;
-        }
-
-
-        section[expanded] .show-more {
-            display: none;
-        }
-
-        section:not([expanded]) .show-less {
-            display: none;
-        }
-
-    </style>
-    <!--
-      Note: The entire `<style>` tag cannot exceed 75,000 bytes. The validator will check for this.
-    -->
-    <!-- -->
-</head>
-<!-- ## Body -->
-<!-- -->
 <body style="margin:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;min-width:100%;background-color:#eeeeee;">
 <div class="wrapper" style="width:100%;table-layout:fixed;">
 
@@ -433,73 +281,73 @@ $input = (array)json_decode($file);
                                                     <span style="font-size: 9px; line-height:18px; font-weight: bold; font-family: Verdana, Helvetica, sans-serif; color:#38464f;">
                                от <?php echo number_format($min, 0, ",", " "); ?> &#8381;<sup>*</sup></span>
                                                     <span class="show-more"><amp-img
-                                                                src="https://paradox.band/images/amp/arrow_down.png"
-                                                                width="32"
-                                                                height="32"
-                                                                style="vertical-align: middle; margin-right: 10px; margin-top: -10px; margin-bottom: -10px;"
-                                                                alt=""/></span>
+                                                            src="https://paradox.band/images/amp/arrow_down.png"
+                                                            width="32"
+                                                            height="32"
+                                                            style="vertical-align: middle; margin-right: 10px; margin-top: -10px; margin-bottom: -10px;"
+                                                            alt=""/></span>
                                                     <span class="show-less"><amp-img src="https://paradox.band/images/amp/arrow_up.png"
-                                                                 width="32"
-                                                                 height="32"
-                                                                 style="vertical-align: middle; margin-right: 10px; margin-top: -10px; margin-bottom: -10px;"
-                                                                 alt=""/></span>
+                                                                                     width="32"
+                                                                                     height="32"
+                                                                                     style="vertical-align: middle; margin-right: 10px; margin-top: -10px; margin-bottom: -10px;"
+                                                                                     alt=""/></span>
                                 </span></span>
                                                 </h2>
                                                 <div style="padding-top: 10px; padding-bottom: 10px;">
                                                     <?php foreach ($homes as $home): ?>
-                                                    <?php $home = (array)$home; ?>
-                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom: 10px;">
-                                                        <tbody>
-                                                        <tr>
-                                                            <td style="padding: 10px; padding-top: 5px; padding-bottom: 5px; border: 2px solid #edf6e2; ">
-                                                                <table width="100%" border="0" cellspacing="0"
-                                                                       cellpadding="0">
-                                                                    <tbody>
-                                                                    <tr>
-                                                                        <td align="left"
-                                                                            style="font-size: 13px; line-height:16px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f;"><span
+                                                        <?php $home = (array)$home; ?>
+                                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom: 10px;">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td style="padding: 10px; padding-top: 5px; padding-bottom: 5px; border: 2px solid #edf6e2; ">
+                                                                    <table width="100%" border="0" cellspacing="0"
+                                                                           cellpadding="0">
+                                                                        <tbody>
+                                                                        <tr>
+                                                                            <td align="left"
+                                                                                style="font-size: 13px; line-height:16px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f;"><span
                                                                                     style="color: #b4e29a; font-weight: bold;"><?= $home['type'] ?></span>
-                                                                        </td>
-                                                                        <td align="left" width="140px"
-                                                                            style="font-size: 13px; line-height:16px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f; padding-left: 10px;"><span
+                                                                            </td>
+                                                                            <td align="left" width="140px"
+                                                                                style="font-size: 13px; line-height:16px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f; padding-left: 10px;"><span
                                                                                     style="color: #b4e29a; font-weight: bold;"> <span
                                                                                         style="font-size: 9px; line-height:18px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f;">
                                                                    прием заявок до <span style="color: #8cc542; font-weight: bold;"><?= $home['expire'] ?></span></span></span>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
 
-                                                                        <td align="left"
-                                                                            style="font-size: 13px; line-height:18px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f; padding-top: 10px;">
-                                                                            <b><?= $home['address'] ?></b><br/>Начальная
-                                                                            цена: <?= $home['price'] ?><br/>Площадь: <?= $home['square'] ?>
-                                                                        </td>
-                                                                        <td width="140px" valign="bottom"
-                                                                            style="padding-left: 10px;">
-                                                                            <table class="buttonwrapper"
-                                                                                   border="0"
-                                                                                   cellpadding="0"
-                                                                                   cellspacing="0"
-                                                                                   align="right"
-                                                                                   style="width: 100%;  ">
-                                                                                <tr>
-                                                                                    <td class="buttonwrapper pro_editor_editable"
-                                                                                        align="center"
-                                                                                        style="padding: 10px 5px 10px 5px; background: #edf6e2; border-radius: 10px;  -webkit-border-radius:10px; -moz-border-radius:10px;">
-                                                                                        <a href="<?= $home['link'] ?>" class=""
-                                                                                           style="color: #38464f; text-decoration: none; display: block; font-size: 13px; line-height:18px;font-family: Arial, Helvetica, sans-serif; font-weight:bold;">
-                                                                                            <span style="color:#38464f;">подробнее</span></a>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </td>
-                                                                    </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        </tbody>
-                                                    </table>
+                                                                            <td align="left"
+                                                                                style="font-size: 13px; line-height:18px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f; padding-top: 10px;">
+                                                                                <b><?= $home['address'] ?></b><br/>Начальная
+                                                                                цена: <?= $home['price'] ?><br/>Площадь: <?= $home['square'] ?>
+                                                                            </td>
+                                                                            <td width="140px" valign="bottom"
+                                                                                style="padding-left: 10px;">
+                                                                                <table class="buttonwrapper"
+                                                                                       border="0"
+                                                                                       cellpadding="0"
+                                                                                       cellspacing="0"
+                                                                                       align="right"
+                                                                                       style="width: 100%;  ">
+                                                                                    <tr>
+                                                                                        <td class="buttonwrapper pro_editor_editable"
+                                                                                            align="center"
+                                                                                            style="padding: 10px 5px 10px 5px; background: #edf6e2; border-radius: 10px;  -webkit-border-radius:10px; -moz-border-radius:10px;">
+                                                                                            <a href="<?= $home['link'] ?>" class=""
+                                                                                               style="color: #38464f; text-decoration: none; display: block; font-size: 13px; line-height:18px;font-family: Arial, Helvetica, sans-serif; font-weight:bold;">
+                                                                                                <span style="color:#38464f;">подробнее</span></a>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
                                                     <?php endforeach; ?>
                                                 </div>
                                             </section>
