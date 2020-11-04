@@ -425,7 +425,6 @@ $input = (array)json_decode($file);
                                             <?php endforeach; ?>
                                             <section>
                                                 <h2 style="background-color: #edf6e2; padding: 5px; padding-top: 10px; padding-bottom: 10px;">
-                              <span class="accordion-title">
                                                   <span class="accordion-title">
                                               <span style="font-size: 13px; line-height:18px; font-weight: bold; font-family: Verdana, Helvetica, sans-serif; color:#38464f; padding-left: 10px; padding-right:5px; display: flex;
     align-items: center; text-align: left; width: 50%;
@@ -445,7 +444,6 @@ $input = (array)json_decode($file);
                                                                  style="vertical-align: middle; margin-right: 10px; margin-top: -10px; margin-bottom: -10px;"
                                                                  alt=""/></span>
                                 </span></span>
-
                                                 </h2>
                                                 <div style="padding-top: 10px; padding-bottom: 10px;">
                                                     <?php foreach ($homes as $home): ?>
