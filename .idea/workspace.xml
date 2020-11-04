@@ -19,10 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1686d178-0b41-4fb5-978d-1ba6093879b8" name="Default Changelist" comment="Make list of elements">
-      <change afterPath="$PROJECT_DIR$/process.php" afterDir="false" />
+    <list default="true" id="1686d178-0b41-4fb5-978d-1ba6093879b8" name="Default Changelist" comment="1. Отсортировать города, Отсортировать список объектов в следующем порядке: Москва, Московская область, Санкт Петербург, Ленинградская область, далее города в алфавитном порядке">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/dataminer_dom_rf.csv" beforeDir="false" afterPath="$PROJECT_DIR$/input/dataminer_dom_rf.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process.php" beforeDir="false" afterPath="$PROJECT_DIR$/process.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/result.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +84,7 @@
       <option name="presentableId" value="Default" />
       <updated>1603903843311</updated>
       <workItem from="1603903844491" duration="345000" />
-      <workItem from="1604464661422" duration="904000" />
+      <workItem from="1604464661422" duration="1995000" />
     </task>
     <task id="LOCAL-00001" summary="Make list of elements">
       <created>1604339343165</created>
@@ -92,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604339343165</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="1. Отсортировать города, Отсортировать список объектов в следующем порядке: Москва, Московская область, Санкт Петербург, Ленинградская область, далее города в алфавитном порядке">
+      <created>1604465843091</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1604465843091</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,7 +122,8 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Make list of elements" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make list of elements" />
+    <MESSAGE value="1. Отсортировать города, Отсортировать список объектов в следующем порядке: Москва, Московская область, Санкт Петербург, Ленинградская область, далее города в алфавитном порядке" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Отсортировать города, Отсортировать список объектов в следующем порядке: Москва, Московская область, Санкт Петербург, Ленинградская область, далее города в алфавитном порядке" />
   </component>
   <component name="WindowStateProjectService">
     <state x="100" y="123" width="1240" height="677" key="DiffContextDialog" timestamp="1604339230204">
@@ -129,6 +138,54 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="530" y="173" key="Github.UntrackedFilesDialog/0.23.1440.877@0.23.1440.877" timestamp="1603903995299" />
+    <state width="1398" height="286" key="GridCell.Tab.0.bottom" timestamp="1604466150652">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="286" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1604466150652" />
+    <state width="1398" height="286" key="GridCell.Tab.0.center" timestamp="1604466150651">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="286" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1604466150651" />
+    <state width="1398" height="286" key="GridCell.Tab.0.left" timestamp="1604466150650">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="286" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1604466150650" />
+    <state width="1398" height="286" key="GridCell.Tab.0.right" timestamp="1604466150651">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="286" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1604466150651" />
+    <state width="1398" height="286" key="GridCell.Tab.1.bottom" timestamp="1604466150653">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="286" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1604466150653" />
+    <state width="1398" height="286" key="GridCell.Tab.1.center" timestamp="1604466150652">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="286" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1604466150652" />
+    <state width="1398" height="286" key="GridCell.Tab.1.left" timestamp="1604466150652">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="286" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1604466150652" />
+    <state width="1398" height="286" key="GridCell.Tab.1.right" timestamp="1604466150653">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="286" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1604466150653" />
+    <state width="1398" height="286" key="GridCell.Tab.2.bottom" timestamp="1604466150655">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="286" key="GridCell.Tab.2.bottom/0.23.1440.877@0.23.1440.877" timestamp="1604466150655" />
+    <state width="1398" height="286" key="GridCell.Tab.2.center" timestamp="1604466150654">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="286" key="GridCell.Tab.2.center/0.23.1440.877@0.23.1440.877" timestamp="1604466150654" />
+    <state width="1398" height="286" key="GridCell.Tab.2.left" timestamp="1604466150654">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="286" key="GridCell.Tab.2.left/0.23.1440.877@0.23.1440.877" timestamp="1604466150654" />
+    <state width="1398" height="286" key="GridCell.Tab.2.right" timestamp="1604466150654">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="286" key="GridCell.Tab.2.right/0.23.1440.877@0.23.1440.877" timestamp="1604466150654" />
     <state x="539" y="392" key="NewPhpFileDialog" timestamp="1604464769071">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -137,10 +194,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="221" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1604465566282" />
-    <state x="320" y="188" key="Vcs.Push.Dialog.v2" timestamp="1604339346900">
+    <state x="320" y="188" key="Vcs.Push.Dialog.v2" timestamp="1604465844708">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="188" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1604339346900" />
+    <state x="320" y="188" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1604465844708" />
     <state x="100" y="123" width="1240" height="677" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1604339361993">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -149,16 +206,5 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="518" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1604339298559" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/process.php</url>
-          <line>38</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

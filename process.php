@@ -10,7 +10,7 @@ foreach ($lines as $line) {
     }
 }
 
-$result = [];
+$preprocessing = [];
 foreach ($homes as $home) {
     $home[0] = str_replace("г. ", "", $home[0]);
     $addr = explode(",", $home[0]);
@@ -22,7 +22,7 @@ foreach ($homes as $home) {
     $addrParts = explode(",", $home[0]);
     $address = trim(implode(',', array_slice($addrParts, 1)));
 
-    $result[] = [
+    $preprocessing[] = [
         'city' => $city,
         'address' => $address,
         'expire' => $expire,
@@ -54,7 +54,15 @@ function cmp($a, $b)
     return strcmp($a["city"], $b["city"]);
 }
 
-usort($result, "cmp");
+usort($preprocessing, "cmp");
+
+$result = [];
+foreach ($preprocessing as $item) {
+    if (!isset($result[$item['city']])) {
+        $result[$item['city']] = [];
+    }
+    $result[$item['city']][] = $item;
+}
 
 $json = json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
 file_put_contents('./input/input.json', $json);

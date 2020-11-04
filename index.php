@@ -1,14 +1,7 @@
 <?php
 
-$file = file_get_contents('./input/dataminer_dom_rf.csv');
-$lines = explode(PHP_EOL, $file);
-$homes = [];
-foreach ($lines as $line) {
-    $parts = explode(';', $line);
-    if (strlen($parts[0]) > 1) {
-        $homes[] = $parts;
-    }
-}
+$file = file_get_contents('./input/input.json');
+$input = (array)json_decode($file);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -375,7 +368,7 @@ foreach ($lines as $line) {
                                     <tbody>
 
                                     <?php
-                                    foreach ($homes as $home): ?>
+                                    foreach ($input as $city => $homes): ?>
                                         <tr>
                                             <td style="padding: 0px; padding-top: 0px; padding-bottom: 5px;">
                                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -389,17 +382,12 @@ foreach ($lines as $line) {
                                                                 <tr>
                                                                     <td align="left"
                                                                         style="font-size: 13px; line-height:18px; font-weight: bold; font-family: Verdana, Helvetica, sans-serif; color:#38464f; padding-left: 10px;">
-                                                                        <?php
-                                                                        $home[0] = str_replace("г. ", "", $home[0]);
-                                                                        $addr = explode(",", $home[0]);
-                                                                        echo $addr[0]; ?>
+                                                                        <?= $city ?>
                                                                     </td>
                                                                     <td align="right"
                                                                         style="font-size: 9px; line-height:18px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f;">
                                                                         окончание приема заявок <span
-                                                                                style="color: #8cc542; font-weight: bold;"><?php
-                                                                            $addr = explode(" ", $home[2]);
-                                                                            echo $addr[1]; ?></span>
+                                                                                style="color: #8cc542; font-weight: bold;">?</span>
                                                                     </td>
                                                                 </tr>
 
@@ -411,7 +399,9 @@ foreach ($lines as $line) {
                                                 </table>
                                             </td>
                                         </tr>
-                                        <tr>
+                                        <?php foreach ($homes as $home): ?>
+                                            <?php $home = (array)$home; ?>
+                                            <tr>
                                             <td style="padding: 0px; padding-top: 0px; padding-bottom: 5px;">
                                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                     <tbody>
@@ -423,12 +413,12 @@ foreach ($lines as $line) {
                                                                 <tr>
                                                                     <td align="left"
                                                                         style="font-size: 13px; line-height:18px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f; padding-left: 10px;">
-                                                                        Адрес: <?php $home[0] = str_replace("г. ", "", $home[0]); $addr = explode(",", $home[0]); echo trim(implode(',', array_slice($addr, 1))); ?>
-                                                                        <br>Начальная цена: <?php echo $home[3]; ?> <br>Площадь: <?php echo $home[5]; ?>
+                                                                        Адрес: <?= $home['address'] ?>
+                                                                        <br>Начальная цена: <?= $home['price'] ?>
+                                                                        <br>Площадь: <?= $home['square'] ?>
                                                                     </td>
                                                                     <td align="right" width="160"
-                                                                        style="font-size: 13px; line-height:16px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f;"><span
-                                                                                style="color: #b4e29a; font-weight: bold;"><?php echo $home[1]; ?><br>
+                                                                        style="font-size: 13px; line-height:16px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f;"><span style="color: #b4e29a; font-weight: bold;"><?= $home['type'] ?><br>
                                                                         <table class="buttonwrapper" width="120"
                                                                                border="0" cellpadding="0"
                                                                                cellspacing="0" align="right"
@@ -438,7 +428,7 @@ foreach ($lines as $line) {
                                                                                 <td class="buttonwrapper pro_editor_editable"
                                                                                     align="center"
                                                                                     style="padding: 10px 5px 10px 5px; background: #edf6e2; border-radius: 10px;  -webkit-border-radius:10px; -moz-border-radius:10px;">
-                                                                                    <a href="https://xn--d1aqf.xn--p1ai<?php echo $home[4]; ?>" class=""
+                                                                                    <a href="<?= $home["link"] ?>" class=""
                                                                                        style="color: #38464f; text-decoration: none; display: block; font-size: 13px; line-height:18px;font-family: Arial, Helvetica, sans-serif; font-weight:bold;"><span
                                                                                                 style="color:#38464f;">подробнее</span></a>
                                                                                 </td>
@@ -456,8 +446,8 @@ foreach ($lines as $line) {
                                                 </table>
                                             </td>
                                         </tr>
-                                    <?php
-                                    endforeach; ?>
+                                        <?php endforeach ?>
+                                    <?php endforeach; ?>
                                     </tbody>
                                 </table>
                                 <!--[if (gte mso 9)|(IE)]>
