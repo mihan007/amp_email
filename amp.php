@@ -426,9 +426,11 @@ $input = (array)json_decode($file);
                                             <section>
                                                 <h2 style="background-color: #edf6e2; padding: 5px; padding-top: 10px; padding-bottom: 10px;">
                               <span class="accordion-title">
-                                  <?php $map = []; ?>
-                                                  <span style="text-align: left; font-size: 13px; line-height:18px; font-weight: bold; font-family: Verdana, Helvetica, sans-serif; color:#38464f; padding-left: 10px; padding-right:5px;"><?= $city ?></span>
-                                <span style="width: <?php echo $map[$city] ?? 50; ?>%; display: flex; justify-content: space-between;">
+                                                  <span class="accordion-title">
+                                              <span style="font-size: 13px; line-height:18px; font-weight: bold; font-family: Verdana, Helvetica, sans-serif; color:#38464f; padding-left: 10px; padding-right:5px; display: flex;
+    align-items: center; text-align: left; width: 50%;
+    box-sizing: border-box;"><?= $city ?></span>
+                                <span style="width: 50%; display: flex; justify-content: space-between; align-items: center;">
                                                     <span style="font-size: 9px; line-height:18px; font-weight: bold; font-family: Verdana, Helvetica, sans-serif; color:#38464f;">
                                от <?php echo number_format($min, 0, ",", " "); ?> &#8381;<sup>*</sup></span>
                                                     <span class="show-more"><amp-img
