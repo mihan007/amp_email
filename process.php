@@ -22,11 +22,19 @@ foreach ($homes as $home) {
     $addrParts = explode(",", $home[0]);
     $address = trim(implode(',', array_slice($addrParts, 1)));
 
+    $mappingType = [
+        "Продажа имущественного комплекса" => "имущественный комплекс",
+        "Продажа здания и аренда земельного участка" => "здание и аренда земельного участка",
+        "Продажа здания" => "здание",
+        "Продажа помещения" => "помещение",
+        "Продажа земельного участка" => "земельный участок"
+    ];
+
     $preprocessing[] = [
         'city' => $city,
         'address' => $address,
         'expire' => $expire,
-        'type' => $home[1],
+        'type' => $mappingType[$home[1]] ?? $home[1],
         'price' => $home[3],
         'square' => trim($home[5]),
         'link' => "https://xn--d1aqf.xn--p1ai{$home[4]}"
