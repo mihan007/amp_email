@@ -125,16 +125,6 @@
         .accordion-title span:nth-child(2) {
             text-align: right;
         }
-
-
-        section[expanded] .show-more {
-            display: none;
-        }
-
-        section:not([expanded]) .show-less {
-            display: none;
-        }
-
     </style>
     <!--
       Note: The entire `<style>` tag cannot exceed 75,000 bytes. The validator will check for this.

@@ -19,13 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1686d178-0b41-4fb5-978d-1ba6093879b8" name="Default Changelist" comment="Amp ready">
-      <change afterPath="$PROJECT_DIR$/parts/body_amp.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parts/head_amp.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parts/head_html.php" afterDir="false" />
+    <list default="true" id="1686d178-0b41-4fb5-978d-1ba6093879b8" name="Default Changelist" comment="Html ready">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amp.php" beforeDir="false" afterPath="$PROJECT_DIR$/make.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amp_result.html" beforeDir="false" afterPath="$PROJECT_DIR$/amp_result.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/make.php" beforeDir="false" afterPath="$PROJECT_DIR$/make.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/amp.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/amp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/html.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/html.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parts/body_amp.php" beforeDir="false" afterPath="$PROJECT_DIR$/parts/body_amp.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parts/head_html.php" beforeDir="false" afterPath="$PROJECT_DIR$/parts/head_html.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +97,8 @@
       <workItem from="1604178038287" duration="100000" />
       <workItem from="1604178778731" duration="4384000" />
       <workItem from="1604471845102" duration="1638000" />
-      <workItem from="1604490418689" duration="918000" />
+      <workItem from="1604490418689" duration="1840000" />
+      <workItem from="1604899561641" duration="2888000" />
     </task>
     <task id="LOCAL-00001" summary="Amp ready">
       <created>1604476182987</created>
@@ -105,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604476182987</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Html ready">
+      <created>1604491418847</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1604491418847</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,10 +133,17 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Amp ready" />
-    <option name="LAST_COMMIT_MESSAGE" value="Amp ready" />
+    <MESSAGE value="Html ready" />
+    <option name="LAST_COMMIT_MESSAGE" value="Html ready" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="100" y="123" width="1240" height="677" key="DiffContextDialog" timestamp="1604902680973">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="100" y="123" width="1240" height="677" key="DiffContextDialog/0.23.1440.877@0.23.1440.877" timestamp="1604902680973" />
     <state x="586" y="365" key="Github.ShareDialog" timestamp="1603903990209">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -144,10 +160,14 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="221" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1603904335787" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1604476185104">
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1604491420343">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1604476185104" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1604491420343" />
+    <state x="418" y="216" width="604" height="490" key="find.popup" timestamp="1604900262785">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="418" y="216" width="604" height="490" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1604900262785" />
     <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1603919411305">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

@@ -73,7 +73,7 @@
                                                                 <tr>
                                                                     <td class="tdcenter">
                                                                         <strong>ЗЕМЕЛЬНЫЙ УЧАСТОК</strong><br/>
-                                                                        15 шт.
+                                                                        <?= $typeCounter['zu'] ?> шт.
                                                                     </td>
                                                                 </tr>
                                                                 </tbody>
@@ -120,7 +120,7 @@
                                                                     <td class="tdcenter">
                                                                         <strong>ИМУЩЕСТВЕННЫЙ
                                                                             КОМПЛЕКС</strong><br/>
-                                                                        7 шт.
+                                                                        <?= $typeCounter['ik'] ?> шт.
                                                                     </td>
                                                                 </tr>
                                                                 </tbody>
@@ -180,7 +180,7 @@
                                                                 <tr>
                                                                     <td class="tdcenter">
                                                                         <strong>ЗДАНИЕ</strong><br/>
-                                                                        2 шт.
+                                                                        <?= $typeCounter['zd'] ?>  шт.
                                                                     </td>
                                                                 </tr>
                                                                 </tbody>
@@ -228,7 +228,7 @@
                                                                 <tr>
                                                                     <td class="tdcenter">
                                                                         <strong>ПОМЕЩЕНИЕ</strong><br/>
-                                                                        2 шт.
+                                                                        <?= $typeCounter['pm'] ?>  шт.
                                                                     </td>
                                                                 </tr>
                                                                 </tbody>
@@ -273,7 +273,7 @@
                                             <?php endforeach; ?>
                                             <section>
                                                 <h2 style="background-color: #edf6e2; padding: 5px; padding-top: 10px; padding-bottom: 10px;">
-                                                  <span class="accordion-title">
+                                                  <span class="accordion-title" style="display: flex;  justify-content: space-between;">
                                               <span style="font-size: 13px; line-height:18px; font-weight: bold; font-family: Verdana, Helvetica, sans-serif; color:#38464f; padding-left: 10px; padding-right:5px; display: flex;
     align-items: center; text-align: left; width: 50%;
     box-sizing: border-box;"><?= $city ?></span>
@@ -558,7 +558,7 @@
 
             <tr>
                 <td class="tdtext bglight "
-                    style="padding-top:12px;padding-bottom:12px; text-align: left;font-size: 16px; line-height:22px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f; word-break: normal;  border-top: 18px solid #8cc542;">
+                    style="padding-top:12px;padding-bottom:12px; text-align: left;font-size: 16px; line-height:22px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f; word-break: normal;  border-top: 2px solid #8cc542;">
                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                         <tbody>
                         <tr>
