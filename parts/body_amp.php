@@ -633,7 +633,7 @@
                 line-height:11px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f; word-break: normal;">
                     Вы получили это письмо, потому что подписались на рассылку на сайте <a href="https://дом.рф/land"
                                                                                            style="color: #38464f;">https://дом.рф/land.</a>
-                    Нажмите <a href="#" style="color: #38464f;">здесь</a>, чтобы отписаться.
+                    Нажмите <a href="[% param.url_unsub %]" style="color: #38464f;">здесь</a>, чтобы отписаться.
                 </td>
             </tr>
             </tbody>

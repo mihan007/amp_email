@@ -19,14 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1686d178-0b41-4fb5-978d-1ba6093879b8" name="Default Changelist" comment="Html ready">
+    <list default="true" id="1686d178-0b41-4fb5-978d-1ba6093879b8" name="Default Changelist" comment="Modify template for view entire message gmail">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/make.php" beforeDir="false" afterPath="$PROJECT_DIR$/make.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/amp.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/amp.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/html.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/html.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parts/body_amp.php" beforeDir="false" afterPath="$PROJECT_DIR$/parts/body_amp.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parts/head_html.php" beforeDir="false" afterPath="$PROJECT_DIR$/parts/head_html.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +96,7 @@
       <workItem from="1604471845102" duration="1638000" />
       <workItem from="1604490418689" duration="1840000" />
       <workItem from="1604899561641" duration="2888000" />
+      <workItem from="1605006240846" duration="1425000" />
     </task>
     <task id="LOCAL-00001" summary="Amp ready">
       <created>1604476182987</created>
