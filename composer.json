@@ -1,0 +1,7 @@
+{
+    "require": {
+        "fabpot/goutte": "^4.0",
+        "true/punycode": "~2.0",
+        "algo26-matthias/idna-convert": "^3.0"
+    }
+}

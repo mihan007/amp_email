@@ -19,11 +19,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1686d178-0b41-4fb5-978d-1ba6093879b8" name="Default Changelist" comment="Modify template for view entire message gmail">
+    <list default="true" id="1686d178-0b41-4fb5-978d-1ba6093879b8" name="Default Changelist" comment="Improved version">
+      <change afterPath="$PROJECT_DIR$/input/20201119.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/processDataminer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_04_11_2020,_08_13_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_04_11_2020__08_13__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_04_11_2020,_08_13_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_04_11_2020__08_13__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/make.php" beforeDir="false" afterPath="$PROJECT_DIR$/make.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/amp.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/amp.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/html.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/html.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parts/body_amp.php" beforeDir="false" afterPath="$PROJECT_DIR$/parts/body_amp.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process.php" beforeDir="false" afterPath="$PROJECT_DIR$/processCsv.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +65,7 @@
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="85237759-7b25-4932-a4e1-9c5416ca73b7" />
   </component>
+  <component name="PhpDebugGeneral" xdebug_debug_port="9174" ignore_connections_through_unregistered_servers="true" listening_started="true" xdebug_force_break_when_no_path_mapping="false" xdebug_force_break_when_outside_project="false" />
   <component name="ProjectId" id="1jVz2sEyeog2vEprSYI8sGjsbts" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="false" id="Update" />
@@ -69,15 +78,16 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/parts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/parts" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/input" />
+      <recent name="$PROJECT_DIR$/parts" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -96,7 +106,8 @@
       <workItem from="1604471845102" duration="1638000" />
       <workItem from="1604490418689" duration="1840000" />
       <workItem from="1604899561641" duration="2888000" />
-      <workItem from="1605006240846" duration="1425000" />
+      <workItem from="1605006240846" duration="1826000" />
+      <workItem from="1605814883458" duration="4691000" />
     </task>
     <task id="LOCAL-00001" summary="Amp ready">
       <created>1604476182987</created>
@@ -112,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604491418847</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Improved version">
+      <created>1605010845019</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1605010845019</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,7 +153,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Amp ready" />
     <MESSAGE value="Html ready" />
-    <option name="LAST_COMMIT_MESSAGE" value="Html ready" />
+    <MESSAGE value="Improved version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved version" />
   </component>
   <component name="WindowStateProjectService">
     <state x="100" y="123" width="1240" height="677" key="DiffContextDialog" timestamp="1604902680973">
@@ -150,18 +169,67 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="530" y="173" key="Github.UntrackedFilesDialog/0.23.1440.877@0.23.1440.877" timestamp="1603903995299" />
+    <state width="1398" height="282" key="GridCell.Tab.0.bottom" timestamp="1605819044125">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="1398" height="282" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1605819044125" />
+    <state width="1398" height="282" key="GridCell.Tab.0.center" timestamp="1605819044124">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="1398" height="282" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1605819044124" />
+    <state width="1398" height="282" key="GridCell.Tab.0.left" timestamp="1605819044123">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="1398" height="282" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1605819044123" />
+    <state width="1398" height="282" key="GridCell.Tab.0.right" timestamp="1605819044124">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="1398" height="282" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1605819044124" />
+    <state width="1398" height="282" key="GridCell.Tab.1.bottom" timestamp="1605819044126">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="1398" height="282" key="GridCell.Tab.1.bottom/0.25.1440.875@0.25.1440.875" timestamp="1605819044126" />
+    <state width="1398" height="282" key="GridCell.Tab.1.center" timestamp="1605819044126">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="1398" height="282" key="GridCell.Tab.1.center/0.25.1440.875@0.25.1440.875" timestamp="1605819044126" />
+    <state width="1398" height="282" key="GridCell.Tab.1.left" timestamp="1605819044125">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="1398" height="282" key="GridCell.Tab.1.left/0.25.1440.875@0.25.1440.875" timestamp="1605819044125" />
+    <state width="1398" height="282" key="GridCell.Tab.1.right" timestamp="1605819044126">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="1398" height="282" key="GridCell.Tab.1.right/0.25.1440.875@0.25.1440.875" timestamp="1605819044126" />
+    <state width="1398" height="282" key="GridCell.Tab.2.bottom" timestamp="1605819044127">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="1398" height="282" key="GridCell.Tab.2.bottom/0.25.1440.875@0.25.1440.875" timestamp="1605819044127" />
+    <state width="1398" height="282" key="GridCell.Tab.2.center" timestamp="1605819044127">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="1398" height="282" key="GridCell.Tab.2.center/0.25.1440.875@0.25.1440.875" timestamp="1605819044127" />
+    <state width="1398" height="282" key="GridCell.Tab.2.left" timestamp="1605819044127">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="1398" height="282" key="GridCell.Tab.2.left/0.25.1440.875@0.25.1440.875" timestamp="1605819044127" />
+    <state width="1398" height="282" key="GridCell.Tab.2.right" timestamp="1605819044127">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="1398" height="282" key="GridCell.Tab.2.right/0.25.1440.875@0.25.1440.875" timestamp="1605819044127" />
     <state x="539" y="392" key="NewPhpFileDialog" timestamp="1604490850148">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="539" y="392" key="NewPhpFileDialog/0.23.1440.877@0.23.1440.877" timestamp="1604490850148" />
-    <state x="221" y="100" key="SettingsEditor" timestamp="1603904335787">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state x="221" y="102" key="SettingsEditor" timestamp="1605817201570">
+      <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="221" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1603904335787" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1604491420343">
+    <state x="221" y="102" key="SettingsEditor/0.25.1440.875@0.25.1440.875" timestamp="1605817201570" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1605010846174">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1604491420343" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1605010846174" />
     <state x="418" y="216" width="604" height="490" key="find.popup" timestamp="1604900262785">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -170,5 +238,12 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1603919411305" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="processCsv.php">
+        <watch expression="trim($home[4])" language="PHP" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

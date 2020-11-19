@@ -1,7 +1,7 @@
 <?php
 
 //Make amp
-$file = file_get_contents('./input/input.json');
+$file = file_get_contents('./input/input2.json');
 $input = (array)json_decode($file);
 $typeCounter = [
     'zu' => 0,

@@ -267,10 +267,14 @@
                                             <?php $min = 9e9; ?>
                                             <?php foreach ($homes as $home): ?>
                                                 <?php $res = preg_replace("/[^0-9]/", "", $home->price);
+                                                if (empty($res)) {
+                                                    continue;
+                                                }
                                                 if ($min > (int)$res) {
                                                     $min = $res;
                                                 } ?>
                                             <?php endforeach; ?>
+                                            <?php if ($min == 9e9) { $min = ""; } ?>
                                             <section>
                                                 <h2 style="background-color: #edf6e2; padding: 5px; padding-top: 10px; padding-bottom: 10px;">
                                                   <span class="accordion-title" style="display: flex;  justify-content: space-between;">
@@ -279,7 +283,7 @@
     box-sizing: border-box;"><?= $city ?></span>
                                 <span style="width: 50%; display: flex; justify-content: space-between; align-items: center;">
                                                     <span style="font-size: 9px; line-height:18px; font-weight: bold; font-family: Verdana, Helvetica, sans-serif; color:#38464f;">
-                               от <?php echo number_format($min, 0, ",", " "); ?> &#8381;<sup>*</sup></span>
+                               <?php echo $min > 0 ? "от ". number_format($min, 0, ",", " ") . " &#8381;<sup>*</sup>" : ""; ?></span>
                                                     <span class="show-more"><amp-img
                                                             src="https://paradox.band/images/amp/arrow_down.png"
                                                             width="32"
@@ -320,7 +324,7 @@
                                                                             <td align="left"
                                                                                 style="font-size: 13px; line-height:18px; font-weight: normal; font-family: Verdana, Helvetica, sans-serif; color:#38464f; padding-top: 10px;">
                                                                                 <b><?= $home['address'] ?></b><br/>Начальная
-                                                                                цена: <?= $home['price'] ?><br/>Площадь: <?= $home['square'] ?>
+                                                                                цена: <?= $home['price'] > 0 ? $home['price'] : "-" ?><br/>Площадь: <?= $home['square'] ?>
                                                                             </td>
                                                                             <td width="140px" valign="bottom"
                                                                                 style="padding-left: 10px;">
